@@ -9,6 +9,8 @@ body, html{
 }
 
 header{
+    position: absolute;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,3 +20,40 @@ header{
     padding: 10px;
 }
 
+table{
+    background-color: white;
+    border-collapse: collapse;
+}
+
+td{
+    border: 2px solid black;
+    padding: 15px;
+    text-align: center;
+    width: 125px;
+    font-family: "Montserrat";
+}
+
+.menu{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.head{
+    width: 3em;
+}
+
+.head2{
+    width: 15em;
+}
+
+.head, .head2{
+    font-family: "Comfortaa";
+}
+
+.table_header *{
+    background-color: tomato;
+    color: white;
+}
