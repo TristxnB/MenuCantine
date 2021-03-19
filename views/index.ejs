@@ -24,29 +24,113 @@
                 </tr>
                 <tr>
                     <td class="head">Lundi</td>
-                    <td>Poulet<br>Frite</td>
-                    <td>Poulet<br>Frite</td>
+                    <td>
+                        <% if (menu.lundiMidi.length == 1) { %>
+                            <%= menu.lundiMidi[0] %>
+                        <% } else { %>
+                            <% menu.lundiMidi.forEach(element => { %>
+                             <%= element %>
+                             <br>
+                            <% }) %>
+                        <% } %>
+                    </td>
+
+                    <td>
+                        <% if (menu.lundiSoir.length == 1) { %>
+                            <%= menu.lundiSoir[0] %>
+                        <% } else { %>
+                            <% menu.lundiSoir.forEach(element => { %>
+                             <%= element %>
+                             <br>
+                            <% }) %>
+                        <% } %>
+                    </td>
                 </tr>
                 <tr>
                     <td class="head">Mardi</td>
-                    <td>Poulet<br>Frite</td>
-                    <td>Poulet<br>Frite</td>
+                    <td>
+                        <% if (menu.mardiMidi.length == 1) { %>
+                            <%= menu.mardiMidi[0] %>
+                        <% } else { %>
+                            <% menu.mardiMidi.forEach(element => { %>
+                             <%= element %>
+                             <br>
+                            <% }) %>
+                        <% } %>
+                    </td>
+
+                    <td>
+                        <% if (menu.mardiSoir.length == 1) { %>
+                            <%= menu.mardiSoir[0] %>
+                        <% } else { %>
+                            <% menu.mardiSoir.forEach(element => { %>
+                             <%= element %>
+                             <br>
+                            <% }) %>
+                        <% } %>
+                    </td>
                 </tr>
                 <tr>
                     <td class="head">Mercredi</td>
-                    <td>Poulet<br>Frite</td>
-                    <td>Poulet<br>Frite</td>
+                    <td>
+                        <% if (menu.mercrediMidi.length == 1) { %>
+                            <%= menu.mercrediMidi[0] %>
+                        <% } else { %>
+                            <% menu.mercrediMidi.forEach(element => { %>
+                             <%= element %>
+                             <br>
+                            <% }) %>
+                        <% } %>
+                    </td>
+
+                    <td>
+                        <% if (menu.mercrediSoir.length == 1) { %>
+                            <%= menu.mercrediSoir[0] %>
+                        <% } else { %>
+                            <% menu.mercrediSoir.forEach(element => { %>
+                             <%= element %>
+                             <br>
+                            <% }) %>
+                        <% } %>
+                    </td>
                 </tr>
                 <tr>
                     <td class="head">Jeudi</td>
-                    <td>Poulet<br>Frite</td>
-                    <td>Poulet<br>Frite</td>
+                    <td>
+                        <% if (menu.jeudiMidi.length == 1) { %>
+                            <%= menu.jeudiMidi[0] %>
+                        <% } else { %>
+                            <% menu.jeudiMidi.forEach(element => { %>
+                             <%= element %>
+                             <br>
+                            <% }) %>
+                        <% } %>
+                    </td>
+
+                    <td>
+                        <% if (menu.jeudiSoir.length == 1) { %>
+                            <%= menu.jeudiSoir[0] %>
+                        <% } else { %>
+                            <% menu.jeudiSoir.forEach(element => { %>
+                             <%= element %>
+                             <br>
+                            <% }) %>
+                        <% } %>
+                    </td>
                 </tr>
-                <tr>
-                    <td class="head">Vendredi</td>
-                    <td>Poulet<br>Frite</td>
-                    <td>Poulet<br>Frite</td>
-                </tr>
+                <td class="head">Vendredi</td>
+                <td>
+                    <% if (menu.vendrediMidi.length == 1) { %>
+                        <%= menu.vendrediMidi[0] %>
+                    <% } else { %>
+                        <% menu.vendrediMidi.forEach(element => { %>
+                         <%= element %>
+                         <br>
+                        <% }) %>
+                    <% } %>
+                </td>
+
+                <td></td>
             </tbody>
         </table>
     </div>
