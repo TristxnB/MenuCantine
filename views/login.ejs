@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Cantine - Admin Login</title>
+    <link rel="stylesheet" href="/static/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="wrapper">
+        <div class="login-box">
+            <h1>Se connecter</h1>
+            <form action="/login" method="post">
+                <input type="text" name="user" id="user" placeholder="Nom d'utilisateur">
+                <input type="password" name="pass" id="pass" placeholder="Mot de passe">
+                <input type="submit" value="Log-in">
+            </form>
+            <% if (err) { %>
+                <span class="err"><%= err %></span>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

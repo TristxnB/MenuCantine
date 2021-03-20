@@ -1,0 +1,56 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    background-image: url("/static/imgs/back.jpg");
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Comfortaa";
+}
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+    width: 35em;
+}
+
+h1{
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+input{
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+}
+
+.err{
+    margin-top: 1em;
+    color: tomato;
+}

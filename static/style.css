@@ -57,3 +57,11 @@ td{
     background-color: tomato;
     color: white;
 }
+
+.admin{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: black;
+    font-family: "Montserrat";
+}

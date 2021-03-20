@@ -1,0 +1,21 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    background-image: url("/static/imgs/back.jpg");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Comfortaa";
+    background-color: white;
+    font-size: 2em;
+    padding: 20px;
+}

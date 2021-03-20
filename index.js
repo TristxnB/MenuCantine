@@ -10,6 +10,8 @@ let path = require('path')
 let fs = require('fs')
 let JsonUtil = require("./json-utils")
 
+let adminDb = require("./admin.json")
+
 //Variables globales
 const JWT_TOKEN = "71XhnFBWleoYYxbjGYJxItcv2odyr0g4"
 const fileMenu = path.join(__dirname, "menu.json")
@@ -49,8 +51,40 @@ app.get('/', (req, res)=>{
     })
 })
 
+app.get('/login', (req, res)=>{
+    verifyToken(req.cookies.token).then((decrypt)=>{
+        res.redirect("/admin")
+    }).catch(()=>{
+        res.render("login", {
+            err: null
+        })
+    })
+})
+
+app.post('/login', (req, res)=>{
+    let user = req.body.user
+    let pass = req.body.pass
+    if(user != adminDb.user && pass != adminDb.pass){
+        res.render('login', {
+            err: "Identifiants incorrects"
+        })
+    }else{
+        res.cookie("token", jwt.sign({user: user}, JWT_TOKEN))
+        res.redirect("/admin")
+    }
+})
+
 
 //Routes protéges
+app.get('/admin', (req, res)=>{
+    verifyToken(req.cookies.token).then((decrypt)=>{
+        res.render("admin", {
+            userInfo: decrypt
+        })
+    }).catch(()=>{
+        res.redirect("/login")
+    })
+})
 
 
 //Fonctions utiles
