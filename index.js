@@ -79,13 +79,17 @@ app.post('/login', (req, res)=>{
 app.get('/admin', (req, res)=>{
     verifyToken(req.cookies.token).then((decrypt)=>{
         res.render("admin", {
-            userInfo: decrypt
+            userInfo: decrypt,
+            menu: JsonUtil.getJson()
         })
     }).catch(()=>{
         res.redirect("/login")
     })
 })
 
+app.get('/delete', (req, res)=>{
+    JsonUtil.delElement(req.query.day, req.query.plat) //TODO: Verif token et redirection /admin
+})
 
 //Fonctions utiles
 function verifyToken(token){

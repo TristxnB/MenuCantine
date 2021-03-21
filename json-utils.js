@@ -14,5 +14,13 @@ function getJson(){
     return json
 }
 
+function delElement(jsonkey, element){
+    let json = JSON.parse(fs.readFileSync(jsonFile).toString())
+    json[jsonkey].pop(element)
+    fs.writeFileSync(jsonFile, JSON.stringify(json, null, 4))
+}
+
+
+module.exports.delElement = delElement
 module.exports.getJson = getJson
 module.exports.modifyJson = modifyJson

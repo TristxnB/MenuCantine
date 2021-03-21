@@ -13,5 +13,26 @@
     <header>
         Bonjour <%= userInfo.user %> !
     </header>
+
+    <div class="wrapper">
+        <div class="panel">
+            <div class="lundi day">
+                <h1>Lundi</h1>
+                <div class="midi">
+                    <span class="head">Midi</span>
+                    <% menu.lundiMidi.forEach(element => { %>
+                        <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=lundiMidi">&#10060;</a></div>
+                    <% }) %>
+                </div>
+    
+                <div class="soir">
+                    <span class="head">Soir</span>
+                    <% menu.lundiSoir.forEach(element => { %>
+                        <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=lundiSoir">&#10060;</a></div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
