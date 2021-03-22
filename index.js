@@ -88,7 +88,24 @@ app.get('/admin', (req, res)=>{
 })
 
 app.get('/delete', (req, res)=>{
-    JsonUtil.delElement(req.query.day, req.query.plat) //TODO: Verif token et redirection /admin
+    verifyToken(req.cookies.token).then((decrypt)=>{
+        JsonUtil.delElement(req.query.day, req.query.plat)
+        res.redirect('/admin')
+    }).catch(()=>{
+        res.redirect("/login")
+    })
+    
+})
+
+app.post('/admin', (req, res)=>{
+    verifyToken(req.cookies.token).then((decrypt)=>{
+        let day = req.body.day
+        let plat = req.body.plat
+        JsonUtil.addElement(day, plat)
+        res.redirect('/admin')
+    }).catch(()=>{
+        res.redirect("/login")
+    })
 })
 
 //Fonctions utiles

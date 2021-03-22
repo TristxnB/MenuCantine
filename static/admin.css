@@ -33,7 +33,7 @@ header{
     height: 70%;
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
+    overflow-y: scroll;
 }
 
 .day{
@@ -68,4 +68,8 @@ header{
 .day h1{
     text-align: center;
     margin: 0;
+}
+
+.nothing{
+    color: gray;
 }

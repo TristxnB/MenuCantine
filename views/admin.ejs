@@ -16,22 +16,177 @@
 
     <div class="wrapper">
         <div class="panel">
+
+            <!-- LUNDI -->
             <div class="lundi day">
                 <h1>Lundi</h1>
                 <div class="midi">
                     <span class="head">Midi</span>
-                    <% menu.lundiMidi.forEach(element => { %>
-                        <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=lundiMidi">&#10060;</a></div>
-                    <% }) %>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="lundiMidi">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.lundiMidi.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.lundiMidi.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=lundiMidi">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
+                     
                 </div>
     
                 <div class="soir">
                     <span class="head">Soir</span>
-                    <% menu.lundiSoir.forEach(element => { %>
-                        <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=lundiSoir">&#10060;</a></div>
-                    <% }) %>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="lundiSoir">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.lundiSoir.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.lundiSoir.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=lundiSoir">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
                 </div>
             </div>
+
+
+            <!-- MARDI -->
+            <div class="mardi day">
+                <h1>Mardi</h1>
+                <div class="midi">
+                    <span class="head">Midi</span>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="mardiMidi">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.mardiMidi.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.mardiMidi.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=mardiMidi">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
+                     
+                </div>
+    
+                <div class="soir">
+                    <span class="head">Soir</span>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="mardiSoir">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.mardiSoir.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.mardiSoir.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=mardiSoir">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- MERCREDI -->
+            <div class="mercredi day">
+                <h1>Mercredi</h1>
+                <div class="midi">
+                    <span class="head">Midi</span>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="mercrediMidi">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.mercrediMidi.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.mercrediMidi.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=mercrediMidi">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
+                     
+                </div>
+    
+                <div class="soir">
+                    <span class="head">Soir</span>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="mercrediSoir">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.mercrediSoir.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.mercrediSoir.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=mercrediSoir">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- JEUDI -->
+            <div class="jeudi day">
+                <h1>Jeudi</h1>
+                <div class="midi">
+                    <span class="head">Midi</span>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="jeudiMidi">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.jeudiMidi.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.jeudiMidi.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=jeudiMidi">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
+                     
+                </div>
+    
+                <div class="soir">
+                    <span class="head">Soir</span>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="jeudiSoir">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.jeudiSoir.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.jeudiSoir.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=jeudiSoir">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- VENDREDI -->
+            <div class="vendredi day">
+                <h1>Vendredi</h1>
+                <div class="midi">
+                    <span class="head">Midi</span>
+                    <form action="/admin" method="post">
+                        <input type="hidden" name="day" value="vendrediMidi">
+                        <input type="text" name="plat" id="platInput" placeholder="Ajouter un plat" required>
+                        <input type="submit" value="&#10133">
+                    </form>
+                    <% if (menu.vendrediMidi.length == 0) { %>
+                        <p class="nothing">Il n'y à pas de plat enrengistré à ce jour.</p>
+                        <% } else { %>
+                            <% menu.vendrediMidi.forEach(element => { %>
+                                <div class="plat"><%= element %> <a href="/delete?plat=<%= element %>&day=vendrediMidi">&#10060;</a></div>
+                            <% }) %>
+                    <% } %>
+                     
+                </div>
+            </div>
+            
         </div>
     </div>
 </body>

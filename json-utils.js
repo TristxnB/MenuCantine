@@ -20,7 +20,14 @@ function delElement(jsonkey, element){
     fs.writeFileSync(jsonFile, JSON.stringify(json, null, 4))
 }
 
+function addElement(jsonkey, value){
+    let json = JSON.parse(fs.readFileSync(jsonFile).toString())
+    json[jsonkey].push(value)
+    fs.writeFileSync(jsonFile, JSON.stringify(json, null, 4)) 
+}
 
+
+module.exports.addElement = addElement
 module.exports.delElement = delElement
 module.exports.getJson = getJson
 module.exports.modifyJson = modifyJson
