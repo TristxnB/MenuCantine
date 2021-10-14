@@ -13,7 +13,7 @@ let JsonUtil = require("./json-utils")
 let adminDb = require("./admin.json")
 
 //Variables globales
-const JWT_TOKEN = "71XhnFBWleoYYxbjGYJxItcv2odyr0g4"
+const JWT_TOKEN = "71XhnFBWleoYYxbjGYJxItcv2odyr0g4" //Change It.
 const fileMenu = path.join(__dirname, "menu.json")
 const baseMenu =
 {
